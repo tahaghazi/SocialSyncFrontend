@@ -1,9 +1,9 @@
 <template>
-  <section class="py-10 mx-10">
+  <AppSection>
     <PageTitle :page-title="post.title" />
     <time :datetime="post.date" v-text="post.dat"></time>
     <div v-html="post.content" dir="rtl"></div>
-  </section>
+  </AppSection>
 </template>
 <script setup>
 const route = useRoute();

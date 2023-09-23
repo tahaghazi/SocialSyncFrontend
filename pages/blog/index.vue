@@ -1,5 +1,5 @@
 <template>
-  <section class="py-10 mx-10">
+  <AppSection>
     <PageTitle page-title="Blog" />
     <div class="mb-5 max-w-md">
       <searchWidget filter="true" v-model="search" />
@@ -24,7 +24,7 @@
         </button>
       </div>
     </div>
-  </section>
+  </AppSection>
 </template>
 <script setup>
 let search = ref("");
