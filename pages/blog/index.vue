@@ -27,9 +27,9 @@
   </AppSection>
 </template>
 <script setup>
-export let search = ref("");
-export const limit = 8;
-export let offset = ref(0);
+let search = ref("");
+const limit = 8;
+let offset = ref(0);
 
 const { data, pending } = await useFetch(`/api/blog/posts/`, {
   lazy: true,
@@ -48,4 +48,4 @@ watch(search, () => {
 useHead({
   titleTemplate: "%s - blog",
 });
-export </script>
+</script>
