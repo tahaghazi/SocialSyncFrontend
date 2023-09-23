@@ -1,5 +1,5 @@
 <template>
   <div>
-  <TheWelcome/>
+    <TheWelcome />
   </div>
 </template>

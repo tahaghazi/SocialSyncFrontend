@@ -5,7 +5,7 @@
       <searchWidget filter="true" v-model="search" />
     </div>
     <div class="gap-8 md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full space-y-16 md:space-y-0 md:gap-y-16">
-      <div v-if="pending">....</div>
+      <LoadingBox v-if="pending" v-for="key in [...Array(8).keys()]" :key="key"></LoadingBox>
       <PostBox v-else v-for="(post, index) in data.results" :post="post" :key="index" dir="rtl" />
     </div>
     <div class="flex justify-between py-20">
@@ -27,9 +27,9 @@
   </AppSection>
 </template>
 <script setup>
-let search = ref("");
-const limit = 8;
-let offset = ref(0);
+export let search = ref("");
+export const limit = 8;
+export let offset = ref(0);
 
 const { data, pending } = await useFetch(`/api/blog/posts/`, {
   lazy: true,
@@ -48,4 +48,4 @@ watch(search, () => {
 useHead({
   titleTemplate: "%s - blog",
 });
-</script>
+export </script>
