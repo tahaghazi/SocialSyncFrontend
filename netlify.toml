@@ -5,12 +5,3 @@
     command='nuxt generate'
     environment = { NODE_VERSION = "18.0.0" }
 
-# Also put headers
-[[headers]]
-    for = "/*"
-
-    [headers.values]
-        X-Frame-Options = "DENY"
-        X-XSS-Protection = "1; mode=block"
-        X-Content-Type-Options = "nosniff"
-        cache-control = "public, max-age=10000, must-revalidate"
