@@ -5,7 +5,7 @@ input[type="file"]::-webkit-file-upload-button {
 </style>
 <template>
   <AppSection>
-      <AlertItem :class="{'hidden':(pending || !status)}" :type="status" :msg="success?'Saved successfully.':'Please check'" />
+    <AlertItem :class="{ hidden: pending || !status }" :type="status" :msg="success ? 'Saved successfully.' : 'Please check'" />
 
     <PageTitle page-title="New Post" />
     <form enctype="multipart/form-data" @submit.prevent="submitForm" class="py-10">
@@ -63,9 +63,11 @@ let formData = ref({
   title: "",
   content: "",
 });
+
 async function handleFile(e) {
   requestData.append("image", e.target.files[0]);
 }
+
 const submitForm = async (e) => {
   isLoading.value = true;
   for (const [key, value] of Object.entries(formData.value)) {
@@ -81,7 +83,7 @@ const submitForm = async (e) => {
   });
   isLoading.value = res.pending.value;
   success.value = res.status.value === "success";
-  status.value = res.status.value 
+  status.value = res.status.value;
 
   if (success) {
     // Reset form data and file input
@@ -89,6 +91,7 @@ const submitForm = async (e) => {
     formData.value = {};
   }
 };
+
 useHead({
   titleTemplate: "%s - post - new",
 });

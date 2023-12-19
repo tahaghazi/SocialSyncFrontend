@@ -13,7 +13,7 @@ defineProps({
     </NuxtLink>
     <div class="flex flex-col space-y-4 text-right pt-8 w-full">
       <div class="flex items-center text-sm space-x-4 rtl:space-x-reverse">
-        <a href="#" class="rounded-full bg-secondary py-2 px-4 font-medium text-light hover:bg-gray-700" >social</a>
+        <a href="#" class="rounded-full bg-secondary py-2 px-4 font-medium text-light hover:bg-gray-700">social</a>
       </div>
       <h3 class="font-medium text-lg text-light leading-[1.75]">
         <NuxtLink :to="'/blog/' + post.slug" :title="post.title">
