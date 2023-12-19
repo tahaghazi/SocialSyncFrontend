@@ -5,7 +5,7 @@ input[type="file"]::-webkit-file-upload-button {
 </style>
 <template>
   <AppSection>
-      <AlertItem :class="{'hidden':!status}" :type="status" :msg="success?'Saved successfully.':'Please check'" />
+      <AlertItem :class="{'hidden':(pending || !status)}" :type="status" :msg="success?'Saved successfully.':'Please check'" />
 
     <PageTitle page-title="New Post" />
     <form enctype="multipart/form-data" @submit.prevent="submitForm" class="py-10">
@@ -62,7 +62,6 @@ let status = ref(null);
 let formData = ref({
   title: "",
   content: "",
-  image: null,
 });
 async function handleFile(e) {
   requestData.append("image", e.target.files[0]);

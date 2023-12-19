@@ -31,7 +31,7 @@ let search = ref("");
 const limit = 8;
 let offset = ref(0);
 
-const { data, pending } = await useFetch(`/api/blog/posts/`, {
+const { data, pending } = await useFetch(`/api/posts/posts/`, {
   lazy: true,
   baseURL: "http://127.0.0.1:8000",
   watch: [search, offset],
