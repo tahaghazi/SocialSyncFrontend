@@ -1,10 +1,10 @@
 <script setup>
-let openDrawer=ref(false)
+let openDrawer = ref(false);
 </script>
 <template>
   <header class="flex items-center mx-auto pt-6 w-full">
     <div class="wrapper flex items-center justify-between max-w-[1440px] mx-auto md:px-8 px-4 w-full">
-      <img src="/favicon.ico" width="80" />
+      <NuxtLink to="/"> <img src="/icon.png" width="100" alt="SocialSync" /> </NuxtLink>
       <nav class="flex space-x-3 text-center">
         <!-- <ul class="font-medium hidden items-center lg:flex space-x-8 text-lg">
           <NuxtLink to="/" class="hover:text-primary" active-class="text-primary">Home</NuxtLink>
@@ -20,7 +20,7 @@ let openDrawer=ref(false)
               </svg>
             </div>
           </button> -->
-          <button @click="openDrawer=!openDrawer" class="-mr-3 px-3 py-3 hover:text-primary focus:outline-none" aria-label="القائمة الجانبية">
+          <button @click="openDrawer = !openDrawer" class="-mr-3 px-3 py-3 hover:text-primary focus:outline-none" aria-label="القائمة الجانبية">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="40" height="40">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
@@ -29,5 +29,5 @@ let openDrawer=ref(false)
       </nav>
     </div>
   </header>
-  <Drawer v-model="openDrawer" :open-drawer="openDrawer"/>
+  <Drawer v-model="openDrawer" :open-drawer="openDrawer" />
 </template>
