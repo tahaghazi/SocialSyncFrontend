@@ -90,6 +90,6 @@ const submitForm = async (e) => {
   }
 };
 useHead({
-  titleTemplate: "%s - blog - new",
+  titleTemplate: "%s - post - new",
 });
 </script>
