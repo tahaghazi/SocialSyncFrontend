@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'wow',
+      title: 'SocialSync',
     }
   }
 })
