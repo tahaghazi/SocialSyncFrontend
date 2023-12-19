@@ -14,7 +14,8 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  modules: ['nuxt-lazy-load'],
+  modules: ['nuxt-lazy-load',    "nuxt-csurf",
+],
   lazyLoad: {
     // These are the default values
     images: true,

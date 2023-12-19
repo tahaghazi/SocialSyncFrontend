@@ -22,8 +22,8 @@ export default {
           break;
       }
       return {
-        boxStyle: "text-color-800 bg-color-50 dark:text-color-400".replace(/color/gi, color),
-        buttonStyle: "bg-color-50 text-color-500 focus:ring-color-400 hover:bg-color-200 dark:text-color-400".replace(/color/gi, color),
+        boxStyle: "bg-color-50 text-color-400".replace(/color/gi, color),
+        buttonStyle: "bg-color-50  focus:ring-color-400 hover:bg-color-200 text-color-400".replace(/color/gi, color),
       };
     },
   },
